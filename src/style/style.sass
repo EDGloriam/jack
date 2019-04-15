@@ -1,0 +1,359 @@
+@import "utils/reset"
+@import "utils/fiches"
+@import url('https://fonts.googleapis.com/css?family=Sree+Krushnadevaraya')
+@font-face 
+    font-family: GothamPro
+    src: url(../fonts/GothamPro-Bold.ttf)
+@font-face 
+    font-family: GothamProReg
+    src: url(../fonts/GothamPro-Reg.ttf)   
+
+
+
+$mainFontSize: 18px
+
+$desktopWidth: 1200px
+$tabletWidth: 992px
+$phoneWidth: 576px
+
+html
+	font-size: $mainFontSize
+
+
+
+.brown
+	color: #b8937f
+.line
+	position: relative
+	&:before
+		content: ""
+		background: #906a56
+		width: 45px
+		display: block
+		height: 1px
+		position: absolute
+		left: -60px
+		top: 50%
+
+body
+	background: linear-gradient(-45deg, #000, #392c26) no-repeat fixed
+	height: -webkit-fill-available
+	color: #fff
+.shtora
+	height: -webkit-fill-available
+	width: 100%
+	// background: red
+	position: absolute
+	// top: rem(60)
+	z-index: 1
+	
+.container
+	min-height: 50px
+	// border: 1px solid aqua
+	padding-right: 15px
+	padding-left: 15px
+	margin-right: auto
+	margin-left: auto
+	// border: 1px solid red
+	width: 1200px
+	// margin: auto
+	display: flex
+header
+	margin-top: 50px
+	.container
+		justify-content: space-between
+	.lang
+		letter-spacing: rem(5)
+		font-family: GothamPro
+		font-size: rem(16)
+		text-transform: uppercase
+		display: flex
+		display: none
+		a + a
+			margin-left: 30px
+		a
+			height: fit-content
+		a.active, a:hover
+			color: #ffffff
+	h1
+		font-family: Sree Krushnadevaraya,serif
+		padding-top: rem(30)
+		text-transform: uppercase
+		position: relative
+		font-size: rem(50)
+		line-height: rem(50)
+		width: rem(570)
+		color: #fff
+		&:before
+			content: ''
+			display: block
+			width: rem(140)
+			height: rem(140)
+			background: #b48f7c
+			// margin-left: rem(-40)
+			position: absolute
+			z-index: -1
+			top: 0
+			left: rem(-40)
+
+#content 
+	color: #fff
+	.container
+		align-items: flex-end
+		justify-content: space-between
+	.men
+		border: 7px solid #a37e6b
+		height: rem(433)
+		width: rem(760)
+		align-items: center
+		display: flex
+		padding-right: rem(65)
+		position: relative
+		.pic
+			position: absolute
+			bottom: 0px
+			left: rem(30)
+			img
+				width: 100%
+				height: auto
+		.greeting
+			// width: 225px
+			margin-left: rem(375)
+			h2
+				font-size: rem(18)
+				font-family: GothamPro
+				text-transform: uppercase
+				// letter-spacing: 11px
+				margin-bottom: rem(25)
+			p
+				line-height: rem(25)
+				font-family: GothamProReg
+				font-size: rem(15)
+			a:before
+				content: '('
+				color: #ffffff
+			a:after
+				content: ')'
+				color: #ffffff
+			a:hover
+				text-decoration: underline
+
+	.with-timer
+		position: relative
+		p
+			font-family: 'Sree Krushnadevaraya', serif
+			font-size: rem(24)
+			line-height: rem(24)
+		.background
+			font-family: 'Sree Krushnadevaraya', serif
+			font-size: rem(223)
+			position: absolute
+			top: rem(-250)
+			left: rem(-57)
+			z-index: -1
+			color: rgba(192,118,81, 0.11)
+			span
+				text-transform: uppercase
+	#timer-container
+		margin-top: rem(30)
+		min-height: rem(20)
+		margin-bottom: rem(15)
+		display: flex
+		p
+			display: flex
+			flex-direction: column
+			align-items: center
+			font-size: rem(68)
+			.num-val 
+				font-family: GothamPro
+				line-height: rem(60)
+				position: relative
+
+			
+		p + p
+			padding-left: rem(60)
+			.num-val
+				&:before, &:after
+					content: ''
+					display: block
+					background: #ffffff
+					width: rem(11)
+					height: rem(11)
+					position: absolute
+					left: rem(-45)
+				&:after
+					bottom: rem(5)
+				&:before
+					top: rem(19)
+		.text-val
+			margin-top: rem(10)
+			letter-spacing: rem(5)
+			font-family: GothamPro
+			font-size: rem(16)
+			color: #b8937f
+			text-transform: uppercase
+
+@media (max-width: 1199px)
+	html
+		font-size: 16px
+	.container
+		width: 960px
+		// border-color: red
+	#content 
+		.men 
+			width: 35rem
+			height: rem(375)
+			padding-right: rem(20)
+			.pic 
+				left: rem(15)
+				img
+					width: 78%
+			.greeting
+				margin-left: rem(340)
+		.with-timer .background
+			font-size: rem(210)
+
+
+
+@media (max-width: 991px)
+	html
+		font-size: 15px
+	.container
+		width: 720px
+		// border-color: blue
+		
+	header .container
+		flex-direction: column-reverse
+		.lang
+			align-self: flex-end
+			margin-top: rem(20)
+			margin-bottom: rem(20)
+		h1
+			padding-top: rem(50)
+			font-size: rem(40)
+			line-height: rem(40)
+			width: rem(450)
+	#content
+		.container
+			align-items: center
+			flex-direction: column-reverse
+		.men
+			width: 100%
+			margin-top: rem(100)
+			height: 27rem
+			padding: 20px
+			.pic
+				img
+					width: 92%
+			.greeting
+				margin-left: rem(355)
+				p
+					font-size: rem(27)
+					line-height: rem(35)
+		.with-timer 
+			align-items: center
+			padding-bottom: 60px
+			text-align: center
+			p
+				font-size: rem(40)
+				line-height: rem(45)
+			&>p
+				margin-top: -26px
+			.background
+				margin-left: -10px
+				text-align: center
+				position: relative
+				left: 0
+				top: 0
+				font-size: rem(300)
+				line-height: rem(200)
+			#timer-container
+				display: flex
+				justify-content: center
+				.text-val
+					margin-top: 0
+
+
+@media (max-width: 767px)
+	html
+		font-size: 14px
+	.container
+		width: 540px
+		// border-color: green
+	#content
+		.container
+		.men
+			height: 28rem
+			margin-top: rem(110)
+			width: 112%
+			.pic
+				left: -3px
+				img
+					width: 88%
+			.greeting
+				.line:before
+					width: 40px
+					left: -47px
+				margin-left: rem(325)
+				a:before, a:after
+					display: none
+				p
+					font-size: rem(22)	
+		.with-timer
+			.background
+				font-size: rem(250)
+		
+	
+
+
+@media (max-width: 576px)
+	html
+		font-size: 14px
+	.container
+		width: 100%
+		// border-color: grey
+	header
+		.container h1
+			width: 100%
+			font-size: rem(38)
+	#content
+		.container
+			.men
+				flex-direction: column
+				height: fit-content
+				width: 100%
+				.pic
+					width: 103%
+					position: absolute	
+					top: -20vw
+					left: rem(-5)
+					img
+						width: 100%
+						display: block
+						margin: auto
+				.greeting
+					margin-left: 0
+					padding: rem(20)
+					padding-right: 0
+					padding-bottom: rem(40)
+					margin-top: 130vw
+					h2
+						font-size: rem(30)		
+					p
+						font-size: rem(25)	
+						line-height: rem(35)	
+			.with-timer
+				& > p:last-child
+					padding: 0 15px
+			.background
+				font-size: 37vw	
+			
+		.line
+			&:before
+				display: none
+			
+
+		
+					
+		
+	

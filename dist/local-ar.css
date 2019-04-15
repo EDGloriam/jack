@@ -1,0 +1,42 @@
+#content .men .greeting h2 {
+    font-size: 2rem;
+}
+
+header .container h1 {
+    padding-top: 0.478rem;
+    font-size: 2.822rem;
+    line-height: 3.322rem;
+    width: 32.1rem;
+}
+#content .men {
+    padding-right: 1.311rem;
+}
+#content .men .greeting {
+    margin-left: 19.733rem;
+}
+#content .men .greeting p {
+    line-height: 1.689rem;
+    font-size: 1.433rem;
+}
+#content .men .greeting p {
+    line-height: 1.789rem;
+    font-size: 1.333rem;
+}
+#content .men .greeting p b,
+#content .men .greeting p a{
+    font-size: 0.9em;
+}
+.line::before {
+    width: 35px;
+    left: -40px;
+}
+#content .with-timer p {
+    font-size: 2.033rem;
+}
+#content #timer-container .text-val {
+    font-size: 1.389rem;
+}
+#content .with-timer .background {
+    font-size: 22.889rem;
+    line-height: 0.7em;
+}

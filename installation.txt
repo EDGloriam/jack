@@ -1,0 +1,3 @@
+npm i @babel/core babel-loader@8 @babel/preset-env  --save-dev
++ создать файл .babelrc:
+    
